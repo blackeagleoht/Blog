@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myblog',    ## 数据库名称
         'USER': 'root',
-        'PASSWORD': '123123',    ## 安装 mysql 数据库时，输入的 root 用户的密码
+        'PASSWORD': '123456',    ## 安装 mysql 数据库时，输入的 root 用户的密码
         'HOST': '127.0.0.1',
         'PORT':'3306',           #端口
         'OPTIONS': {'charset': 'utf8'},#很重要，不然会乱码
