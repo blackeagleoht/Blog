@@ -1,0 +1,752 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Nov 20 04:28:21 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 20 November 2018 04:13:39
+os: Linux-4.19.2-1.el7.elrepo.x86_64 #1 SMP Tue Nov 13 16:18:09 EST 2018
+nodename: vps
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/.virtualenvs/Blog
+writing pidfile to /root/.virtualenvs/Blog/uwsgi.pid
+detected binary path: /root/.virtualenvs/Blog/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/.virtualenvs/Blog/
+your processes number limit is 3695
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/.virtualenvs/Blog/myblog.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Nov 20 2018, 02:23:45)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x25272f0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x25272f0 pid: 20379 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20379)
+spawned uWSGI worker 1 (pid: 20381, cores: 1)
+spawned uWSGI worker 2 (pid: 20382, cores: 1)
+spawned uWSGI worker 3 (pid: 20383, cores: 1)
+spawned uWSGI worker 4 (pid: 20384, cores: 1)
+spawned uWSGI worker 5 (pid: 20385, cores: 1)
+[pid: 20381|app: 0|req: 1/1] 223.104.64.7 () {44 vars in 726 bytes} [Tue Nov 20 12:28:33 2018] GET / => generated 1714 bytes in 49 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 20382|app: 0|req: 1/2] 223.104.64.7 () {44 vars in 704 bytes} [Tue Nov 20 12:28:33 2018] GET /favicon.ico => generated 1961 bytes in 34 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 20384|app: 0|req: 1/3] 223.104.64.7 () {40 vars in 683 bytes} [Tue Nov 20 12:43:27 2018] GET /admin => generated 0 bytes in 69 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 20383|app: 0|req: 1/4] 223.104.64.7 () {40 vars in 685 bytes} [Tue Nov 20 12:43:27 2018] GET /admin/ => generated 0 bytes in 84 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 20385|app: 0|req: 1/5] 223.104.64.7 () {40 vars in 722 bytes} [Tue Nov 20 12:43:27 2018] GET /admin/login/?next=/admin/ => generated 1652 bytes in 342 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 20381|app: 0|req: 2/6] 223.104.64.7 () {52 vars in 1056 bytes} [Tue Nov 20 12:43:34 2018] POST /admin/login/?next=/admin/ => generated 1783 bytes in 362 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 20382|app: 0|req: 2/7] 223.104.64.7 () {52 vars in 1056 bytes} [Tue Nov 20 12:43:43 2018] POST /admin/login/?next=/admin/ => generated 0 bytes in 148 msecs (HTTP/1.1 302) 9 headers in 531 bytes (1 switches on core 0)
+[pid: 20384|app: 0|req: 2/8] 223.104.64.7 () {46 vars in 911 bytes} [Tue Nov 20 12:43:43 2018] GET /admin/ => generated 2738 bytes in 198 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 20383|app: 0|req: 2/9] 223.104.64.7 () {44 vars in 881 bytes} [Tue Nov 20 12:44:09 2018] GET /admin/auth/user/ => generated 6476 bytes in 397 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 20385|app: 0|req: 2/10] 223.104.64.7 () {42 vars in 768 bytes} [Tue Nov 20 12:44:10 2018] GET /admin/jsi18n/ => generated 7682 bytes in 46 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 20381|app: 0|req: 3/11] 223.104.64.7 () {44 vars in 903 bytes} [Tue Nov 20 12:44:19 2018] GET /admin/password_change/ => generated 2517 bytes in 76 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 20382|app: 0|req: 3/12] 223.104.64.7 () {52 vars in 1092 bytes} [Tue Nov 20 12:44:38 2018] POST /admin/password_change/ => generated 2681 bytes in 394 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 20384|app: 0|req: 3/13] 223.104.64.7 () {52 vars in 1092 bytes} [Tue Nov 20 12:44:59 2018] POST /admin/password_change/ => generated 0 bytes in 263 msecs (HTTP/1.1 302) 6 headers in 295 bytes (1 switches on core 0)
+[pid: 20383|app: 0|req: 3/14] 223.104.64.7 () {46 vars in 950 bytes} [Tue Nov 20 12:44:59 2018] GET /admin/password_change/done/ => generated 1157 bytes in 72 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 20385|app: 0|req: 3/15] 223.104.64.7 () {44 vars in 882 bytes} [Tue Nov 20 12:45:17 2018] GET /admin/ => generated 2738 bytes in 97 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Nov 20 10:52:00 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 20 November 2018 04:13:39
+os: Linux-4.19.2-1.el7.elrepo.x86_64 #1 SMP Tue Nov 13 16:18:09 EST 2018
+nodename: vps
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/.virtualenvs/Blog
+writing pidfile to /root/.virtualenvs/Blog/uwsgi.pid
+detected binary path: /root/.virtualenvs/Blog/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/.virtualenvs/Blog/
+your processes number limit is 3695
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/.virtualenvs/Blog/myblog.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Nov 20 2018, 02:23:45)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0xe7c2f0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xe7c2f0 pid: 1687 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1687)
+spawned uWSGI worker 1 (pid: 1689, cores: 1)
+spawned uWSGI worker 2 (pid: 1690, cores: 1)
+spawned uWSGI worker 3 (pid: 1691, cores: 1)
+spawned uWSGI worker 4 (pid: 1692, cores: 1)
+spawned uWSGI worker 5 (pid: 1693, cores: 1)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./blog/views.py", line 21, in get
+    count_nums = Counts.objects.get(id=1)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: Counts matching query does not exist.
+[pid: 1689|app: 0|req: 1/1] 218.16.63.77 () {44 vars in 829 bytes} [Tue Nov 20 18:52:17 2018] GET / => generated 77901 bytes in 2143 msecs (HTTP/1.1 500) 4 headers in 200 bytes (1 switches on core 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./blog/views.py", line 21, in get
+    count_nums = Counts.objects.get(id=1)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenvs/Blog/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: Counts matching query does not exist.
+[pid: 1690|app: 0|req: 1/2] 64.233.172.29 () {38 vars in 672 bytes} [Tue Nov 20 18:52:21 2018] GET /admin/login/?next=/admin/ => generated 1652 bytes in 5016 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1691|app: 0|req: 1/3] 64.233.172.29 () {38 vars in 623 bytes} [Tue Nov 20 18:52:21 2018] GET / => generated 76678 bytes in 4999 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1689|app: 0|req: 2/4] 218.16.63.77 () {44 vars in 797 bytes} [Tue Nov 20 18:52:26 2018] GET /admin/ => generated 0 bytes in 112 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 1690|app: 0|req: 2/5] 218.16.63.77 () {42 vars in 773 bytes} [Tue Nov 20 18:52:27 2018] GET /admin/ => generated 0 bytes in 2 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 1692|app: 0|req: 1/6] 218.16.63.77 () {42 vars in 739 bytes} [Tue Nov 20 18:52:22 2018] GET /favicon.ico => generated 3759 bytes in 4407 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1691|app: 0|req: 2/7] 218.16.63.77 () {44 vars in 834 bytes} [Tue Nov 20 18:52:27 2018] GET /admin/login/?next=/admin/ => generated 1652 bytes in 379 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1689|app: 0|req: 3/8] 218.16.63.77 () {42 vars in 810 bytes} [Tue Nov 20 18:52:28 2018] GET /admin/login/?next=/admin/ => generated 1652 bytes in 471 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1690|app: 0|req: 3/9] 64.233.172.27 () {38 vars in 586 bytes} [Tue Nov 20 18:52:28 2018] GET /favicon.ico => generated 3750 bytes in 26 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 1693) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 1702)
+[pid: 1692|app: 0|req: 2/10] 218.16.63.77 () {52 vars in 1055 bytes} [Tue Nov 20 18:52:46 2018] POST /admin/login/?next=/admin/ => generated 0 bytes in 339 msecs (HTTP/1.1 302) 9 headers in 531 bytes (1 switches on core 0)
+[pid: 1691|app: 0|req: 3/11] 218.16.63.77 () {46 vars in 910 bytes} [Tue Nov 20 18:52:46 2018] GET /admin/ => generated 4969 bytes in 56 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1689|app: 0|req: 4/12] 218.16.63.77 () {44 vars in 892 bytes} [Tue Nov 20 18:52:50 2018] GET /admin/blog/counts/add/ => generated 5396 bytes in 105 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1690|app: 0|req: 4/13] 218.16.63.77 () {42 vars in 774 bytes} [Tue Nov 20 18:52:50 2018] GET /admin/jsi18n/ => generated 7682 bytes in 67 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1692|app: 0|req: 3/14] 218.16.63.77 () {52 vars in 1146 bytes} [Tue Nov 20 18:52:54 2018] GET /admin/blog/counts/add/ => generated 3750 bytes in 64 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 1702) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 1711)
+[pid: 1691|app: 0|req: 4/15] 218.16.63.77 () {42 vars in 827 bytes} [Tue Nov 20 18:53:13 2018] GET /admin/blog/ => generated 3779 bytes in 120 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1689|app: 0|req: 5/16] 218.16.63.77 () {44 vars in 890 bytes} [Tue Nov 20 18:53:17 2018] GET /admin/blog/counts/ => generated 3067 bytes in 63 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1690|app: 0|req: 5/17] 218.16.63.77 () {42 vars in 770 bytes} [Tue Nov 20 18:53:17 2018] GET /admin/jsi18n/ => generated 7682 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1692|app: 0|req: 4/18] 218.16.63.77 () {44 vars in 873 bytes} [Tue Nov 20 18:53:22 2018] GET /admin/ => generated 4969 bytes in 352 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1691|app: 0|req: 5/19] 218.16.63.77 () {44 vars in 875 bytes} [Tue Nov 20 18:53:27 2018] GET /admin/blog/counts/ => generated 3750 bytes in 21 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 1711) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 1718)
+[pid: 1689|app: 0|req: 6/20] 218.16.63.77 () {42 vars in 827 bytes} [Tue Nov 20 18:53:54 2018] GET /admin/blog/ => generated 3779 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1690|app: 0|req: 6/21] 218.16.63.77 () {44 vars in 865 bytes} [Tue Nov 20 18:53:59 2018] GET /admin/ => generated 4969 bytes in 114 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1692|app: 0|req: 5/22] 218.16.63.77 () {44 vars in 884 bytes} [Tue Nov 20 18:54:02 2018] GET /admin/blog/counts/ => generated 3067 bytes in 61 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1691|app: 0|req: 6/23] 218.16.63.77 () {42 vars in 769 bytes} [Tue Nov 20 18:54:02 2018] GET /admin/jsi18n/ => generated 7682 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1689|app: 0|req: 7/24] 218.16.63.77 () {44 vars in 890 bytes} [Tue Nov 20 18:54:06 2018] GET /admin/blog/counts/add/ => generated 3750 bytes in 32 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 1718) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 1723)
+[pid: 1690|app: 0|req: 7/25] 218.16.63.77 () {42 vars in 827 bytes} [Tue Nov 20 18:54:11 2018] GET /admin/blog/ => generated 3779 bytes in 118 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1692|app: 0|req: 6/26] 218.16.63.77 () {44 vars in 897 bytes} [Tue Nov 20 18:54:13 2018] GET /admin/blog/counts/add/ => generated 5396 bytes in 135 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1691|app: 0|req: 7/27] 218.16.63.77 () {42 vars in 773 bytes} [Tue Nov 20 18:54:13 2018] GET /admin/jsi18n/ => generated 7682 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1689|app: 0|req: 8/28] 218.16.63.77 () {52 vars in 1162 bytes} [Tue Nov 20 18:54:16 2018] POST /admin/blog/counts/add/ => generated 0 bytes in 61 msecs (HTTP/1.1 302) 8 headers in 517 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1690|app: 0|req: 8/29] 218.16.63.77 () {46 vars in 1150 bytes} [Tue Nov 20 18:54:19 2018] GET /admin/blog/counts/ => generated 3750 bytes in 31 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 1723) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 1728)
+[pid: 1692|app: 0|req: 7/30] 218.16.63.77 () {46 vars in 1159 bytes} [Tue Nov 20 18:54:35 2018] GET /admin/blog/counts/ => generated 5008 bytes in 194 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 1691|app: 0|req: 8/31] 218.16.63.77 () {42 vars in 769 bytes} [Tue Nov 20 18:54:35 2018] GET /admin/jsi18n/ => generated 7682 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1689|app: 0|req: 9/32] 218.16.63.77 () {46 vars in 931 bytes} [Tue Nov 20 18:54:36 2018] GET /admin/blog/counts/ => generated 4831 bytes in 99 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1690|app: 0|req: 9/33] 218.16.63.77 () {42 vars in 769 bytes} [Tue Nov 20 18:54:36 2018] GET /admin/jsi18n/ => generated 7682 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[deadlock-detector] a process holding a robust mutex died. recovering...
+DAMN ! worker 1 (pid: 1689) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 1739)
+[pid: 1691|app: 0|req: 9/34] 218.16.63.77 () {42 vars in 806 bytes} [Tue Nov 20 18:55:15 2018] GET / => generated 13363 bytes in 1473 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+Tue Nov 20 18:55:16 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /admin/blog/ (218.16.63.77)
+OSError: write error
+[pid: 1692|app: 0|req: 8/35] 218.16.63.77 () {42 vars in 828 bytes} [Tue Nov 20 18:55:05 2018] GET /admin/blog/ => generated 0 bytes in 11542 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Tue Nov 20 18:55:17 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /admin/blog/ (218.16.63.77)
+OSError: write error
+[pid: 1728|app: 0|req: 6/36] 218.16.63.77 () {44 vars in 851 bytes} [Tue Nov 20 18:54:59 2018] GET /admin/blog/ => generated 0 bytes in 18182 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 10/37] 218.16.63.77 () {44 vars in 954 bytes} [Tue Nov 20 18:55:17 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Tue Nov 20 18:55:49 2018 - *** HARAKIRI ON WORKER 1 (pid: 1739, try: 1) ***
+Tue Nov 20 18:55:50 2018 - HARAKIRI !!! worker 1 status !!!
+Tue Nov 20 18:55:50 2018 - HARAKIRI [core 0] 218.16.63.77 - GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 since 1542711318
+Tue Nov 20 18:55:50 2018 - HARAKIRI !!! end of worker 1 status !!!
+[pid: 1691|app: 0|req: 10/38] 218.16.63.77 () {44 vars in 947 bytes} [Tue Nov 20 18:55:36 2018] GET / => generated 13363 bytes in 13874 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+Not Found: /404.html
+[pid: 1692|app: 0|req: 9/39] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 18:55:50 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 21 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 7/40] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 18:55:51 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 18 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 11/41] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 18:55:51 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 20 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 1739) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 1746)
+Not Found: /404.html
+[pid: 1691|app: 0|req: 11/42] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 18:55:51 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1692|app: 0|req: 10/43] 218.16.63.77 () {46 vars in 979 bytes} [Tue Nov 20 18:55:55 2018] GET / => generated 13363 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 8/44] 218.16.63.77 () {44 vars in 954 bytes} [Tue Nov 20 18:55:56 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 12/45] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 18:55:56 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 1746) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 1748)
+[pid: 1691|app: 0|req: 12/46] 218.16.63.77 () {46 vars in 978 bytes} [Tue Nov 20 18:56:17 2018] GET / => generated 13363 bytes in 96 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1692|app: 0|req: 11/47] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 18:56:18 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 20 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 9/48] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 18:56:18 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 13/49] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 18:56:19 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1691|app: 0|req: 13/50] 218.16.63.77 () {46 vars in 986 bytes} [Tue Nov 20 18:56:33 2018] GET / => generated 3750 bytes in 23 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 1748) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 1752)
+[pid: 1692|app: 0|req: 12/51] 218.16.63.77 () {46 vars in 978 bytes} [Tue Nov 20 18:56:41 2018] GET / => generated 13363 bytes in 93 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 10/52] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 18:56:41 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 18 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 14/53] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 18:56:42 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 13 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1691|app: 0|req: 14/54] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 18:56:42 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 1752) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 1761)
+Not Found: /50x.html
+[pid: 1692|app: 0|req: 13/55] 218.16.63.77 () {46 vars in 986 bytes} [Tue Nov 20 18:58:54 2018] GET / => generated 3750 bytes in 31 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1728|app: 0|req: 11/56] 218.16.63.77 () {46 vars in 979 bytes} [Tue Nov 20 19:01:44 2018] GET / => generated 13363 bytes in 103 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 15/57] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 19:01:45 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 17 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1691|app: 0|req: 15/58] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 19:01:45 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 14 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1692|app: 0|req: 14/59] 218.16.63.77 () {46 vars in 978 bytes} [Tue Nov 20 19:01:47 2018] GET / => generated 13363 bytes in 207 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 12/60] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 19:01:48 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 13271 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 16/61] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 19:02:01 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 47 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 1691) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 1784)
+Not Found: /404.html
+[pid: 1692|app: 0|req: 15/62] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 19:02:02 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 31 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+Tue Nov 20 19:02:02 2018 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /static/fonts/fontawesome-webfont.ttf?v=4.6.3 (ip 218.16.63.77) !!!
+Tue Nov 20 19:02:02 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 (218.16.63.77)
+OSError: write error
+[pid: 1761|app: 0|req: 14/63] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 19:01:45 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 0 bytes in 16892 msecs (HTTP/1.1 404) 3 headers in 0 bytes (0 switches on core 0)
+[pid: 1728|app: 0|req: 13/64] 218.16.63.77 () {46 vars in 978 bytes} [Tue Nov 20 19:04:10 2018] GET / => generated 13363 bytes in 143 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 17/65] 218.16.63.77 () {44 vars in 954 bytes} [Tue Nov 20 19:04:12 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 15 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 1784) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 1790)
+Not Found: /404.html
+[pid: 1692|app: 0|req: 16/66] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 19:04:20 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 20 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1761|app: 0|req: 15/67] 223.104.64.7 () {42 vars in 770 bytes} [Tue Nov 20 19:04:23 2018] GET / => generated 13363 bytes in 323 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1728|app: 0|req: 14/68] 223.104.64.7 () {44 vars in 906 bytes} [Tue Nov 20 19:04:27 2018] GET / => generated 13363 bytes in 42 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 18/69] 223.104.64.7 () {44 vars in 918 bytes} [Tue Nov 20 19:04:32 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 21 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1692|app: 0|req: 17/70] 223.104.64.7 () {44 vars in 916 bytes} [Tue Nov 20 19:04:35 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 34 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 1790) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 1795)
+[pid: 1761|app: 0|req: 16/71] 223.104.64.7 () {44 vars in 912 bytes} [Tue Nov 20 19:04:37 2018] GET / => generated 13363 bytes in 70 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1728|app: 0|req: 15/72] 218.16.63.77 () {44 vars in 971 bytes} [Tue Nov 20 19:04:54 2018] GET /search/?q=df => generated 13293 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 19/73] 218.16.63.77 () {44 vars in 954 bytes} [Tue Nov 20 19:04:54 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 17 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1692|app: 0|req: 18/74] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 19:04:55 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 15 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 1795) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 1798)
+[pid: 1761|app: 0|req: 17/75] 218.16.63.77 () {44 vars in 947 bytes} [Tue Nov 20 19:05:08 2018] GET /admin/ => generated 5300 bytes in 334 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1728|app: 0|req: 16/76] 218.16.63.77 () {42 vars in 923 bytes} [Tue Nov 20 19:05:09 2018] GET /admin/ => generated 5300 bytes in 62 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1690|app: 0|req: 20/77] 218.16.63.77 () {44 vars in 990 bytes} [Tue Nov 20 19:05:13 2018] GET /admin/blog/counts/ => generated 4831 bytes in 87 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1692|app: 0|req: 19/78] 218.16.63.77 () {42 vars in 875 bytes} [Tue Nov 20 19:05:13 2018] GET /admin/jsi18n/ => generated 7682 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+DAMN ! worker 4 (pid: 1692) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 1805)
+[pid: 1761|app: 0|req: 18/79] 218.16.63.77 () {44 vars in 946 bytes} [Tue Nov 20 19:05:38 2018] GET /admin/ => generated 5300 bytes in 179 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1728|app: 0|req: 17/80] 218.16.63.77 () {42 vars in 922 bytes} [Tue Nov 20 19:05:38 2018] GET /admin/ => generated 5300 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+Tue Nov 20 19:05:39 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /admin/ (218.16.63.77)
+OSError: write error
+[pid: 1798|app: 0|req: 19/81] 218.16.63.77 () {42 vars in 922 bytes} [Tue Nov 20 19:05:17 2018] GET /admin/ => generated 0 bytes in 22054 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 1690|app: 0|req: 21/82] 218.16.63.77 () {44 vars in 994 bytes} [Tue Nov 20 19:05:44 2018] GET /admin/blog/blog/add/ => generated 7956 bytes in 152 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1761|app: 0|req: 19/83] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 19:05:47 2018] GET /admin/jsi18n/ => generated 3750 bytes in 39 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 4 (pid: 1805) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 1812)
+[pid: 1728|app: 0|req: 18/84] 218.16.63.77 () {44 vars in 1058 bytes} [Tue Nov 20 19:06:01 2018] GET /admin/blog/category/add/?_to_field=id&_popup=1 => generated 3394 bytes in 172 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1798|app: 0|req: 20/85] 218.16.63.77 () {42 vars in 902 bytes} [Tue Nov 20 19:06:01 2018] GET /admin/jsi18n/ => generated 7682 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1690|app: 0|req: 22/86] 218.16.63.77 () {52 vars in 1337 bytes} [Tue Nov 20 19:06:12 2018] POST /admin/blog/category/add/?_to_field=id&_popup=1 => generated 400 bytes in 66 msecs (HTTP/1.1 200) 6 headers in 226 bytes (1 switches on core 0)
+[pid: 1761|app: 0|req: 20/87] 218.16.63.77 () {44 vars in 1049 bytes} [Tue Nov 20 19:06:16 2018] GET /admin/blog/tag/add/?_to_field=id&_popup=1 => generated 3379 bytes in 104 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /50x.html
+[pid: 1728|app: 0|req: 19/88] 218.16.63.77 () {42 vars in 893 bytes} [Tue Nov 20 19:06:19 2018] GET /admin/jsi18n/ => generated 3750 bytes in 24 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+DAMN ! worker 4 (pid: 1812) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 1820)
+[pid: 1798|app: 0|req: 21/89] 218.16.63.77 () {52 vars in 1322 bytes} [Tue Nov 20 19:06:26 2018] POST /admin/blog/tag/add/?_to_field=id&_popup=1 => generated 400 bytes in 140 msecs (HTTP/1.1 200) 6 headers in 226 bytes (1 switches on core 0)
+Building prefix dict from the default dictionary ...
+Dumping model to file cache /tmp/jieba.cache
+Loading model cost 1.840 seconds.
+Prefix dict has been built succesfully.
+[pid: 1690|app: 0|req: 23/90] 218.16.63.77 () {52 vars in 1262 bytes} [Tue Nov 20 19:06:28 2018] POST /admin/blog/blog/add/ => generated 0 bytes in 2028 msecs (HTTP/1.1 302) 8 headers in 549 bytes (1 switches on core 0)
+[pid: 1761|app: 0|req: 21/91] 218.16.63.77 () {46 vars in 1292 bytes} [Tue Nov 20 19:06:31 2018] GET /admin/blog/blog/ => generated 5285 bytes in 90 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 1728|app: 0|req: 20/92] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 19:06:31 2018] GET /admin/jsi18n/ => generated 7682 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+Tue Nov 20 19:07:16 2018 - *** HARAKIRI ON WORKER 4 (pid: 1820, try: 1) ***
+Tue Nov 20 19:07:17 2018 - HARAKIRI !!! worker 4 status !!!
+Tue Nov 20 19:07:18 2018 - HARAKIRI [core 0] 218.16.63.77 - GET / since 1542712005
+Tue Nov 20 19:07:18 2018 - HARAKIRI !!! end of worker 4 status !!!
+[pid: 1761|app: 0|req: 22/93] 218.16.63.77 () {42 vars in 911 bytes} [Tue Nov 20 19:07:17 2018] GET / => generated 15367 bytes in 1507 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Tue Nov 20 19:07:19 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (218.16.63.77)
+OSError: write error
+[pid: 1690|app: 0|req: 24/94] 218.16.63.77 () {42 vars in 910 bytes} [Tue Nov 20 19:06:56 2018] GET / => generated 0 bytes in 23036 msecs (HTTP/1.1 200) 3 headers in 0 bytes (0 switches on core 0)
+Tue Nov 20 19:07:19 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (218.16.63.77)
+OSError: write error
+[pid: 1798|app: 0|req: 22/95] 218.16.63.77 () {42 vars in 910 bytes} [Tue Nov 20 19:06:52 2018] GET / => generated 0 bytes in 27371 msecs (HTTP/1.1 200) 3 headers in 0 bytes (0 switches on core 0)
+DAMN ! worker 4 (pid: 1820) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 1828)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 21/96] 218.16.63.77 () {44 vars in 954 bytes} [Tue Nov 20 19:07:20 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 16 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1761|app: 0|req: 23/97] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 19:07:20 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1690|app: 0|req: 25/98] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 19:07:20 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1798|app: 0|req: 23/99] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:07:25 2018] GET / => generated 15367 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+DAMN ! worker 2 (pid: 1690) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 2 (new pid: 1830)
+Not Found: /404.html
+[pid: 1828|app: 0|req: 23/100] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 19:07:26 2018] GET /static/fonts/fontawesome-webfont.woff2?v=4.6.3 => generated 3750 bytes in 4345 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 22/101] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 19:07:30 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 24 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1761|app: 0|req: 24/102] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 19:07:30 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 18 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1798|app: 0|req: 24/103] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:07:42 2018] GET / => generated 15367 bytes in 72 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+DAMN ! worker 2 (pid: 1830) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 2 (new pid: 1834)
+Not Found: /404.html
+[pid: 1828|app: 0|req: 24/104] 218.16.63.77 () {44 vars in 952 bytes} [Tue Nov 20 19:07:47 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.6.3 => generated 3750 bytes in 41 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 1728|app: 0|req: 23/105] 218.16.63.77 () {44 vars in 951 bytes} [Tue Nov 20 19:07:47 2018] GET /static/fonts/fontawesome-webfont.ttf?v=4.6.3 => generated 3750 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 2 buried after 2 seconds
+worker 5 buried after 3 seconds
+worker 1 buried after 3 seconds
+worker 3 buried after 3 seconds
+worker 4 buried after 3 seconds
+binary reloading uWSGI...
+chdir() to /root/.virtualenvs/Blog
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/root/.virtualenvs/Blog/myblog.sock)
+running /root/.virtualenvs/Blog/bin/uwsgi
+[uWSGI] getting INI configuration from myblog_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Nov 20 19:08:23 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 20 November 2018 04:13:39
+os: Linux-4.19.2-1.el7.elrepo.x86_64 #1 SMP Tue Nov 13 16:18:09 EST 2018
+nodename: vps
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/.virtualenvs/Blog
+detected binary path: /root/.virtualenvs/Blog/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/.virtualenvs/Blog/
+your processes number limit is 3695
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 inherited UNIX address /root/.virtualenvs/Blog/myblog.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Nov 20 2018, 02:23:45)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x1e6d330
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1e6d330 pid: 1687 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1687)
+spawned uWSGI worker 1 (pid: 2106, cores: 1)
+spawned uWSGI worker 2 (pid: 2107, cores: 1)
+spawned uWSGI worker 3 (pid: 2108, cores: 1)
+spawned uWSGI worker 4 (pid: 2109, cores: 1)
+spawned uWSGI worker 5 (pid: 2110, cores: 1)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Nov 20 11:18:39 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 20 November 2018 04:13:39
+os: Linux-4.19.2-1.el7.elrepo.x86_64 #1 SMP Tue Nov 13 16:18:09 EST 2018
+nodename: vps
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/.virtualenvs/Blog
+writing pidfile to /root/.virtualenvs/Blog/uwsgi.pid
+detected binary path: /root/.virtualenvs/Blog/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/.virtualenvs/Blog/
+your processes number limit is 3695
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/.virtualenvs/Blog/myblog.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Nov 20 2018, 02:23:45)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x12882d0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x12882d0 pid: 1537 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1537)
+spawned uWSGI worker 1 (pid: 1539, cores: 1)
+spawned uWSGI worker 2 (pid: 1540, cores: 1)
+spawned uWSGI worker 3 (pid: 1541, cores: 1)
+spawned uWSGI worker 4 (pid: 1542, cores: 1)
+spawned uWSGI worker 5 (pid: 1543, cores: 1)
+[pid: 1539|app: 0|req: 1/1] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:18:57 2018] GET / => generated 15378 bytes in 2537 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1540|app: 0|req: 1/2] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:19:45 2018] GET / => generated 15378 bytes in 1863 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1541|app: 0|req: 1/3] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:19:51 2018] GET / => generated 15378 bytes in 2036 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1542|app: 0|req: 1/4] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:19:56 2018] GET / => generated 15378 bytes in 1879 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1543|app: 0|req: 1/5] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:20:02 2018] GET / => generated 15378 bytes in 2747 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1539|app: 0|req: 2/6] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:20:06 2018] GET / => generated 15378 bytes in 121 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1540|app: 0|req: 2/7] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:20:09 2018] GET / => generated 15378 bytes in 120 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1541|app: 0|req: 2/8] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:20:11 2018] GET / => generated 15378 bytes in 124 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1542|app: 0|req: 2/9] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:20:15 2018] GET / => generated 15378 bytes in 124 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1543|app: 0|req: 2/10] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:20:19 2018] GET / => generated 15378 bytes in 125 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1539|app: 0|req: 3/11] 218.16.63.77 () {44 vars in 947 bytes} [Tue Nov 20 19:20:22 2018] GET / => generated 15378 bytes in 45 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1540|app: 0|req: 3/12] 218.16.63.77 () {44 vars in 964 bytes} [Tue Nov 20 19:20:24 2018] GET /archive/ => generated 14648 bytes in 111 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1541|app: 0|req: 3/13] 218.16.63.77 () {44 vars in 966 bytes} [Tue Nov 20 19:20:33 2018] GET /tags/ => generated 13849 bytes in 133 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1542|app: 0|req: 3/14] 218.16.63.77 () {44 vars in 968 bytes} [Tue Nov 20 19:20:36 2018] GET /archive/ => generated 14648 bytes in 130 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1543|app: 0|req: 3/15] 218.16.63.77 () {44 vars in 955 bytes} [Tue Nov 20 19:20:39 2018] GET / => generated 15378 bytes in 117 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1539|app: 0|req: 4/16] 218.16.63.77 () {46 vars in 1030 bytes} [Tue Nov 20 19:24:48 2018] GET /admin/blog/blog/ => generated 5102 bytes in 523 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1540|app: 0|req: 4/17] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 19:24:49 2018] GET /admin/jsi18n/ => generated 7682 bytes in 623 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1541|app: 0|req: 4/18] 218.16.63.77 () {46 vars in 986 bytes} [Tue Nov 20 19:24:55 2018] GET / => generated 15378 bytes in 453 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1542|app: 0|req: 4/19] 218.16.63.77 () {44 vars in 946 bytes} [Tue Nov 20 19:25:02 2018] GET /admin/ => generated 6205 bytes in 1053 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+Tue Nov 20 19:25:35 2018 - *** HARAKIRI ON WORKER 5 (pid: 1543, try: 1) ***
+Tue Nov 20 19:25:36 2018 - HARAKIRI !!! worker 5 status !!!
+Tue Nov 20 19:25:37 2018 - HARAKIRI [core 0] 218.16.63.77 - GET /admin/ since 1542713104
+Tue Nov 20 19:25:37 2018 - HARAKIRI !!! end of worker 5 status !!!
+[pid: 1542|app: 0|req: 5/20] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:25:37 2018] GET / => generated 15378 bytes in 1453 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Tue Nov 20 19:25:39 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (218.16.63.77)
+OSError: write error
+[pid: 1539|app: 0|req: 5/21] 218.16.63.77 () {46 vars in 986 bytes} [Tue Nov 20 19:25:24 2018] GET / => generated 0 bytes in 14892 msecs (HTTP/1.1 200) 3 headers in 0 bytes (0 switches on core 0)
+Tue Nov 20 19:25:39 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (218.16.63.77)
+Tue Nov 20 19:25:39 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (218.16.63.77)
+OSError: write error
+[pid: 1540|app: 0|req: 5/22] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:25:28 2018] GET / => generated 0 bytes in 10761 msecs (HTTP/1.1 200) 3 headers in 0 bytes (0 switches on core 0)
+OSError: write error
+[pid: 1541|app: 0|req: 5/23] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:25:31 2018] GET / => generated 0 bytes in 8228 msecs (HTTP/1.1 200) 3 headers in 0 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 1543) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 1589)
+[pid: 1542|app: 0|req: 6/24] 218.16.63.77 () {42 vars in 922 bytes} [Tue Nov 20 19:25:45 2018] GET /admin/ => generated 6205 bytes in 57 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1539|app: 0|req: 6/25] 218.16.63.77 () {44 vars in 946 bytes} [Tue Nov 20 19:25:58 2018] GET /admin/ => generated 6205 bytes in 60 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1540|app: 0|req: 6/26] 218.16.63.77 () {42 vars in 910 bytes} [Tue Nov 20 19:26:01 2018] GET / => generated 15378 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1541|app: 0|req: 6/27] 218.16.63.77 () {42 vars in 923 bytes} [Tue Nov 20 19:26:11 2018] GET /admin/ => generated 6205 bytes in 181 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 1539) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 1699)
+DAMN ! worker 4 (pid: 1542) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 1700)
+Tue Nov 20 19:32:59 2018 - *** HARAKIRI ON WORKER 5 (pid: 1589, try: 1) ***
+Tue Nov 20 19:32:59 2018 - HARAKIRI !!! worker 5 status !!!
+Tue Nov 20 19:33:00 2018 - HARAKIRI [core 0] 218.16.63.77 - GET /admin/ since 1542713548
+Tue Nov 20 19:33:01 2018 - HARAKIRI !!! end of worker 5 status !!!
+[pid: 1541|app: 0|req: 7/28] 218.16.63.77 () {42 vars in 910 bytes} [Tue Nov 20 19:32:44 2018] GET / => generated 15378 bytes in 16703 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+Tue Nov 20 19:33:01 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (218.16.63.77)
+OSError: write error
+[pid: 1540|app: 0|req: 7/29] 218.16.63.77 () {44 vars in 934 bytes} [Tue Nov 20 19:32:39 2018] GET / => generated 0 bytes in 21934 msecs (HTTP/1.1 200) 3 headers in 0 bytes (0 switches on core 0)
+DAMN ! worker 5 (pid: 1589) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 1712)
+Tue Nov 20 19:33:33 2018 - *** HARAKIRI ON WORKER 4 (pid: 1700, try: 1) ***
+Tue Nov 20 19:33:34 2018 - HARAKIRI !!! worker 4 status !!!
+Tue Nov 20 19:33:35 2018 - HARAKIRI [core 0] 218.16.63.77 - GET /admin/ since 1542713581
+Tue Nov 20 19:33:35 2018 - HARAKIRI !!! end of worker 4 status !!!
+DAMN ! worker 4 (pid: 1700) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 1715)
+SIGINT/SIGQUIT received...killing workers...
+worker 2 buried after 12 seconds
+worker 3 buried after 12 seconds
+worker 1 buried after 12 seconds
+worker 5 buried after 12 seconds
+worker 4 buried after 12 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /root/.virtualenvs/Blog/myblog.sock removed.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Nov 20 11:36:09 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 20 November 2018 04:13:39
+os: Linux-4.19.2-1.el7.elrepo.x86_64 #1 SMP Tue Nov 13 16:18:09 EST 2018
+nodename: vps
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/.virtualenvs/Blog
+writing pidfile to /root/.virtualenvs/Blog/uwsgi.pid
+detected binary path: /root/.virtualenvs/Blog/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/.virtualenvs/Blog/
+your processes number limit is 3695
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/.virtualenvs/Blog/myblog.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Nov 20 2018, 02:23:45)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x1c392e0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 162224 bytes (158 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1c392e0 pid: 1777 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1777)
+spawned uWSGI worker 1 (pid: 1779, cores: 1)
+[pid: 1779|app: 0|req: 1/1] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:36:18 2018] GET / => generated 15378 bytes in 2335 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 2/2] 218.16.63.77 () {42 vars in 910 bytes} [Tue Nov 20 19:36:26 2018] GET / => generated 15378 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 3/3] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:36:32 2018] GET / => generated 15378 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 4/4] 218.16.63.77 () {44 vars in 946 bytes} [Tue Nov 20 19:36:39 2018] GET /admin/ => generated 6205 bytes in 170 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 5/5] 218.16.63.77 () {42 vars in 922 bytes} [Tue Nov 20 19:36:40 2018] GET /admin/ => generated 6205 bytes in 32 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 6/6] 223.104.64.7 () {42 vars in 834 bytes} [Tue Nov 20 19:36:55 2018] GET /admin/ => generated 0 bytes in 13 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 7/7] 223.104.64.7 () {42 vars in 871 bytes} [Tue Nov 20 19:36:56 2018] GET /admin/login/?next=/admin/ => generated 1652 bytes in 48 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 1779|app: 0|req: 8/8] 223.104.64.7 () {42 vars in 825 bytes} [Tue Nov 20 19:36:56 2018] GET /favicon.ico => generated 3583 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 9/9] 223.104.64.7 () {42 vars in 822 bytes} [Tue Nov 20 19:37:06 2018] GET / => generated 15378 bytes in 46 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 10/10] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:15 2018] GET / => generated 15378 bytes in 58 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 11/11] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:41:18 2018] GET / => generated 15378 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 12/12] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:41:20 2018] GET / => generated 15378 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 13/13] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:41:22 2018] GET / => generated 15378 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 14/14] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:41:24 2018] GET / => generated 15378 bytes in 26 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 15/15] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:26 2018] GET / => generated 15378 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 16/16] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:27 2018] GET / => generated 15378 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 17/17] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:29 2018] GET / => generated 15378 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 18/18] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:32 2018] GET / => generated 15378 bytes in 36 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 19/19] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:34 2018] GET / => generated 15378 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 20/20] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:37 2018] GET / => generated 15378 bytes in 40 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 21/21] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:41:39 2018] GET / => generated 15378 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 22/22] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:41:52 2018] GET / => generated 15378 bytes in 44 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 23/23] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 19:50:57 2018] GET / => generated 15378 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 24/24] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 19:51:07 2018] GET / => generated 15378 bytes in 34 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /robots.txt
+[pid: 1779|app: 0|req: 25/25] 176.31.126.56 () {30 vars in 342 bytes} [Tue Nov 20 19:58:39 2018] GET /robots.txt => generated 3580 bytes in 30 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 26/26] 176.31.126.56 () {34 vars in 480 bytes} [Tue Nov 20 19:58:39 2018] GET / => generated 15378 bytes in 57 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 27/27] 176.31.126.56 () {34 vars in 496 bytes} [Tue Nov 20 19:58:41 2018] GET /archive/ => generated 14648 bytes in 31 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 28/28] 176.31.126.56 () {34 vars in 490 bytes} [Tue Nov 20 19:58:43 2018] GET /tags/ => generated 13849 bytes in 44 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 29/29] 176.31.126.56 () {34 vars in 488 bytes} [Tue Nov 20 19:58:46 2018] GET /rss/ => generated 547 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 119 bytes (53 switches on core 0)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.807 seconds.
+Prefix dict has been built succesfully.
+[pid: 1779|app: 0|req: 30/30] 176.31.126.56 () {34 vars in 492 bytes} [Tue Nov 20 19:58:48 2018] GET /blog/1 => generated 17615 bytes in 2838 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 31/31] 176.31.126.56 () {34 vars in 572 bytes} [Tue Nov 20 19:58:53 2018] GET /category/%E6%96%87%E7%AB%A0%E7%B1%BB%E5%88%AB%E6%B5%8B%E8%AF%951 => generated 14458 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 32/32] 176.31.126.56 () {34 vars in 493 bytes} [Tue Nov 20 19:58:55 2018] GET /?page=1 => generated 15378 bytes in 44 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 33/33] 176.31.126.56 () {34 vars in 507 bytes} [Tue Nov 20 19:58:57 2018] GET /archive?page=1 => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 121 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 34/34] 176.31.126.56 () {34 vars in 564 bytes} [Tue Nov 20 19:58:59 2018] GET /tags/%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%951 => generated 14526 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /category
+[pid: 1779|app: 0|req: 35/35] 176.31.126.56 () {34 vars in 509 bytes} [Tue Nov 20 19:59:02 2018] GET /category?page=1 => generated 3581 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 36/36] 176.31.126.56 () {34 vars in 509 bytes} [Tue Nov 20 19:59:02 2018] GET /archive/?page=1 => generated 14648 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 37/37] 176.31.126.56 () {34 vars in 501 bytes} [Tue Nov 20 19:59:04 2018] GET /tags?page=1 => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 118 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 38/38] 218.16.63.77 () {44 vars in 991 bytes} [Tue Nov 20 19:59:51 2018] GET /admin/blog/tag/add/ => generated 4329 bytes in 164 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 39/39] 218.16.63.77 () {42 vars in 876 bytes} [Tue Nov 20 19:59:51 2018] GET /admin/jsi18n/ => generated 7682 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 40/40] 218.16.63.77 () {42 vars in 923 bytes} [Tue Nov 20 19:59:55 2018] GET /admin/ => generated 6205 bytes in 44 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 41/41] 218.16.63.77 () {44 vars in 994 bytes} [Tue Nov 20 19:59:58 2018] GET /admin/blog/blog/add/ => generated 8056 bytes in 168 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 42/42] 218.16.63.77 () {42 vars in 877 bytes} [Tue Nov 20 19:59:59 2018] GET /admin/jsi18n/ => generated 7682 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 43/43] 218.16.63.77 () {44 vars in 1058 bytes} [Tue Nov 20 20:02:43 2018] GET /admin/blog/category/add/?_to_field=id&_popup=1 => generated 3394 bytes in 106 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 44/44] 218.16.63.77 () {42 vars in 902 bytes} [Tue Nov 20 20:02:43 2018] GET /admin/jsi18n/ => generated 7682 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 45/45] 218.16.63.77 () {52 vars in 1337 bytes} [Tue Nov 20 20:02:55 2018] POST /admin/blog/category/add/?_to_field=id&_popup=1 => generated 387 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 226 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 46/46] 218.16.63.77 () {44 vars in 1048 bytes} [Tue Nov 20 20:03:01 2018] GET /admin/blog/tag/add/?_to_field=id&_popup=1 => generated 3379 bytes in 69 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 47/47] 218.16.63.77 () {42 vars in 897 bytes} [Tue Nov 20 20:03:01 2018] GET /admin/jsi18n/ => generated 7682 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 48/48] 218.16.63.77 () {52 vars in 1322 bytes} [Tue Nov 20 20:03:13 2018] POST /admin/blog/tag/add/?_to_field=id&_popup=1 => generated 381 bytes in 25 msecs (HTTP/1.1 200) 6 headers in 226 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 49/49] 218.16.63.77 () {52 vars in 1264 bytes} [Tue Nov 20 20:03:16 2018] POST /admin/blog/blog/add/ => generated 0 bytes in 1608 msecs (HTTP/1.1 302) 8 headers in 632 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 50/50] 218.16.63.77 () {46 vars in 1375 bytes} [Tue Nov 20 20:03:18 2018] GET /admin/blog/blog/ => generated 5809 bytes in 106 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 51/51] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 20:03:18 2018] GET /admin/jsi18n/ => generated 7682 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 52/52] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 20:03:28 2018] GET / => generated 57592 bytes in 108 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 53/53] 218.16.63.77 () {44 vars in 947 bytes} [Tue Nov 20 20:04:03 2018] GET / => generated 57592 bytes in 77 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 54/54] 218.16.63.77 () {44 vars in 947 bytes} [Tue Nov 20 20:06:25 2018] GET / => generated 57592 bytes in 145 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 55/55] 218.16.63.77 () {44 vars in 946 bytes} [Tue Nov 20 20:06:34 2018] GET /admin/ => generated 7135 bytes in 55 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 56/56] 218.16.63.77 () {42 vars in 922 bytes} [Tue Nov 20 20:06:35 2018] GET /admin/ => generated 7135 bytes in 37 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 57/57] 218.16.63.77 () {44 vars in 993 bytes} [Tue Nov 20 20:06:39 2018] GET /admin/blog/blog/add/ => generated 8142 bytes in 127 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 58/58] 218.16.63.77 () {42 vars in 876 bytes} [Tue Nov 20 20:06:40 2018] GET /admin/jsi18n/ => generated 7682 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 59/59] 218.16.63.77 () {52 vars in 1262 bytes} [Tue Nov 20 20:06:52 2018] POST /admin/blog/blog/add/ => generated 10219 bytes in 141 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 60/60] 218.16.63.77 () {42 vars in 876 bytes} [Tue Nov 20 20:06:52 2018] GET /admin/jsi18n/ => generated 7682 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 61/61] 218.16.63.77 () {52 vars in 1262 bytes} [Tue Nov 20 20:06:59 2018] POST /admin/blog/blog/add/ => generated 0 bytes in 211 msecs (HTTP/1.1 302) 8 headers in 514 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 62/62] 218.16.63.77 () {46 vars in 1257 bytes} [Tue Nov 20 20:06:59 2018] GET /admin/blog/blog/ => generated 6193 bytes in 119 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 63/63] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 20:07:00 2018] GET /admin/jsi18n/ => generated 7682 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 64/64] 218.16.63.77 () {42 vars in 910 bytes} [Tue Nov 20 20:07:08 2018] GET / => generated 61427 bytes in 101 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 65/65] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 20:12:14 2018] GET / => generated 61435 bytes in 186 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 66/66] 218.16.63.77 () {44 vars in 948 bytes} [Tue Nov 20 20:12:21 2018] GET / => generated 61435 bytes in 58 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 67/67] 218.16.63.77 () {46 vars in 979 bytes} [Tue Nov 20 20:12:54 2018] GET / => generated 62173 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 68/68] 218.16.63.77 () {46 vars in 979 bytes} [Tue Nov 20 20:13:22 2018] GET / => generated 62173 bytes in 107 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 69/69] 218.16.63.77 () {44 vars in 960 bytes} [Tue Nov 20 20:13:27 2018] GET /blog/3 => generated 21977 bytes in 227 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 70/70] 218.16.63.77 () {44 vars in 954 bytes} [Tue Nov 20 20:13:44 2018] GET / => generated 62173 bytes in 71 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 71/71] 218.16.63.77 () {44 vars in 947 bytes} [Tue Nov 20 20:33:26 2018] GET /admin/ => generated 7422 bytes in 89 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 72/72] 218.16.63.77 () {42 vars in 923 bytes} [Tue Nov 20 20:33:26 2018] GET /admin/ => generated 7422 bytes in 50 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 73/73] 218.16.63.77 () {44 vars in 985 bytes} [Tue Nov 20 20:33:31 2018] GET /admin/blog/blog/ => generated 6025 bytes in 154 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 74/74] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 20:33:31 2018] GET /admin/jsi18n/ => generated 7682 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 75/75] 218.16.63.77 () {44 vars in 1013 bytes} [Tue Nov 20 20:33:34 2018] GET /admin/blog/blog/3/change/ => generated 10217 bytes in 128 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 76/76] 218.16.63.77 () {42 vars in 881 bytes} [Tue Nov 20 20:33:34 2018] GET /admin/jsi18n/ => generated 7682 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 77/77] 218.16.63.77 () {52 vars in 1277 bytes} [Tue Nov 20 20:33:41 2018] POST /admin/blog/blog/3/change/ => generated 0 bytes in 199 msecs (HTTP/1.1 302) 8 headers in 514 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 78/78] 218.16.63.77 () {46 vars in 1262 bytes} [Tue Nov 20 20:33:41 2018] GET /admin/blog/blog/ => generated 6193 bytes in 152 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 79/79] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 20:33:42 2018] GET /admin/jsi18n/ => generated 7682 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 80/80] 218.16.63.77 () {44 vars in 934 bytes} [Tue Nov 20 20:33:46 2018] GET / => generated 62178 bytes in 80 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 81/81] 218.16.63.77 () {44 vars in 1014 bytes} [Tue Nov 20 20:34:09 2018] GET /admin/blog/blog/3/change/ => generated 10234 bytes in 166 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 82/82] 218.16.63.77 () {42 vars in 882 bytes} [Tue Nov 20 20:34:10 2018] GET /admin/jsi18n/ => generated 7682 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 83/83] 218.16.63.77 () {52 vars in 1278 bytes} [Tue Nov 20 20:34:18 2018] POST /admin/blog/blog/3/change/ => generated 0 bytes in 1464 msecs (HTTP/1.1 302) 8 headers in 514 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 84/84] 218.16.63.77 () {46 vars in 1263 bytes} [Tue Nov 20 20:34:20 2018] GET /admin/blog/blog/ => generated 6193 bytes in 64 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 85/85] 218.16.63.77 () {42 vars in 873 bytes} [Tue Nov 20 20:34:20 2018] GET /admin/jsi18n/ => generated 7682 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1779|app: 0|req: 86/86] 218.16.63.77 () {44 vars in 942 bytes} [Tue Nov 20 20:34:24 2018] GET / => generated 62190 bytes in 71 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 1779) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 2260)
+[deadlock-detector] a process holding a robust mutex died. recovering...
+SIGINT/SIGQUIT received...killing workers...
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Nov 20 12:52:10 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 20 November 2018 04:13:39
+os: Linux-4.19.2-1.el7.elrepo.x86_64 #1 SMP Tue Nov 13 16:18:09 EST 2018
+nodename: vps
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/.virtualenvs/Blog
+writing pidfile to /root/.virtualenvs/Blog/uwsgi.pid
+detected binary path: /root/.virtualenvs/Blog/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/.virtualenvs/Blog/
+your processes number limit is 3695
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/.virtualenvs/Blog/myblog.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Nov 20 2018, 02:23:45)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x1c2c2e0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 162224 bytes (158 KB) for 1 cores
+*** Operational MODE: single process ***
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM WARNING: unix socket /root/.virtualenvs/Blog/myblog.sock changed inode. Skip removal
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1c2c2e0 pid: 2271 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2271)
+spawned uWSGI worker 1 (pid: 2273, cores: 1)
+[pid: 2273|app: 0|req: 1/1] 218.16.63.77 () {44 vars in 934 bytes} [Tue Nov 20 20:52:25 2018] GET / => generated 62190 bytes in 2518 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2273|app: 0|req: 2/2] 218.16.63.77 () {44 vars in 946 bytes} [Tue Nov 20 20:52:29 2018] GET /admin/ => generated 8002 bytes in 90 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 2273|app: 0|req: 3/3] 218.16.63.77 () {42 vars in 922 bytes} [Tue Nov 20 20:52:30 2018] GET /admin/ => generated 8002 bytes in 41 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 2273|app: 0|req: 4/4] 218.16.63.77 () {44 vars in 993 bytes} [Tue Nov 20 20:52:39 2018] GET /admin/blog/blog/add/ => generated 8605 bytes in 175 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 2273|app: 0|req: 5/5] 218.16.63.77 () {42 vars in 876 bytes} [Tue Nov 20 20:52:40 2018] GET /admin/jsi18n/ => generated 7682 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2273|app: 0|req: 6/6] 218.16.63.77 () {42 vars in 922 bytes} [Tue Nov 20 21:00:54 2018] GET /admin/ => generated 8002 bytes in 55 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 2273) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 2339)
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[pid: 2339|app: 0|req: 7/7] 218.16.63.77 () {44 vars in 954 bytes} [Tue Nov 20 21:07:13 2018] GET /admin/ => generated 8002 bytes in 2276 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 8/8] 218.16.63.77 () {44 vars in 994 bytes} [Tue Nov 20 21:07:19 2018] GET /admin/blog/blog/add/ => generated 8605 bytes in 195 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 9/9] 218.16.63.77 () {42 vars in 877 bytes} [Tue Nov 20 21:07:19 2018] GET /admin/jsi18n/ => generated 7682 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 10/10] 218.16.63.77 () {46 vars in 1025 bytes} [Tue Nov 20 21:07:25 2018] GET /admin/blog/blog/add/ => generated 8605 bytes in 125 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 11/11] 218.16.63.77 () {42 vars in 877 bytes} [Tue Nov 20 21:07:26 2018] GET /admin/jsi18n/ => generated 7682 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 12/12] 218.16.63.77 () {46 vars in 1025 bytes} [Tue Nov 20 21:07:28 2018] GET /admin/blog/blog/add/ => generated 8605 bytes in 96 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 13/13] 218.16.63.77 () {42 vars in 877 bytes} [Tue Nov 20 21:07:28 2018] GET /admin/jsi18n/ => generated 7682 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 14/14] 218.16.63.77 () {46 vars in 1025 bytes} [Tue Nov 20 21:07:32 2018] GET /admin/blog/blog/add/ => generated 8605 bytes in 87 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 2339|app: 0|req: 15/15] 218.16.63.77 () {42 vars in 877 bytes} [Tue Nov 20 21:07:33 2018] GET /admin/jsi18n/ => generated 7682 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Nov 20 13:07:47 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 20 November 2018 04:13:39
+os: Linux-4.19.2-1.el7.elrepo.x86_64 #1 SMP Tue Nov 13 16:18:09 EST 2018
+nodename: vps
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/.virtualenvs/Blog
+writing pidfile to /root/.virtualenvs/Blog/uwsgi.pid
+detected binary path: /root/.virtualenvs/Blog/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/.virtualenvs/Blog/
+your processes number limit is 3695
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/.virtualenvs/Blog/myblog.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Nov 20 2018, 02:23:45)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x1f0c2e0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 162224 bytes (158 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x1f0c2e0 pid: 2361 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2361)
+spawned uWSGI worker 1 (pid: 2363, cores: 1)
+DAMN ! worker 1 (pid: 2339) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 2364)
+[deadlock-detector] a process holding a robust mutex died. recovering...
+Tue Nov 20 21:07:58 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (218.16.63.77)
+OSError: write error
+[pid: 2363|app: 0|req: 1/1] 218.16.63.77 () {44 vars in 935 bytes} [Tue Nov 20 21:07:54 2018] GET / => generated 0 bytes in 4836 msecs (HTTP/1.1 200) 3 headers in 0 bytes (0 switches on core 0)
+[pid: 2363|app: 0|req: 2/2] 218.16.63.77 () {44 vars in 946 bytes} [Tue Nov 20 21:07:58 2018] GET /admin/ => generated 8002 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 3/3] 218.16.63.77 () {42 vars in 923 bytes} [Tue Nov 20 21:07:59 2018] GET /admin/ => generated 8002 bytes in 36 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 4/4] 218.16.63.77 () {44 vars in 994 bytes} [Tue Nov 20 21:08:03 2018] GET /admin/blog/blog/add/ => generated 8631 bytes in 128 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 5/5] 218.16.63.77 () {42 vars in 876 bytes} [Tue Nov 20 21:08:03 2018] GET /admin/jsi18n/ => generated 7682 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.632 seconds.
+Prefix dict has been built succesfully.
+[pid: 2363|app: 0|req: 6/6] 218.16.63.77 () {52 vars in 1262 bytes} [Tue Nov 20 21:14:59 2018] POST /admin/blog/blog/add/ => generated 0 bytes in 2408 msecs (HTTP/1.1 302) 8 headers in 515 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 7/7] 218.16.63.77 () {46 vars in 1258 bytes} [Tue Nov 20 21:15:01 2018] GET /admin/blog/blog/ => generated 6633 bytes in 1400 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 8/8] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 21:15:03 2018] GET /admin/jsi18n/ => generated 7682 bytes in 424 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 9/9] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 21:15:09 2018] GET / => generated 21595 bytes in 3154 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 10/10] 218.16.63.77 () {44 vars in 1013 bytes} [Tue Nov 20 21:15:35 2018] GET /admin/blog/blog/2/change/ => generated 61200 bytes in 521 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 11/11] 218.16.63.77 () {42 vars in 881 bytes} [Tue Nov 20 21:15:36 2018] GET /admin/jsi18n/ => generated 7682 bytes in 126 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 12/12] 218.16.63.77 () {52 vars in 1279 bytes} [Tue Nov 20 21:15:57 2018] POST /admin/blog/blog/2/change/ => generated 0 bytes in 2005 msecs (HTTP/1.1 302) 8 headers in 632 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 13/13] 218.16.63.77 () {46 vars in 1380 bytes} [Tue Nov 20 21:16:00 2018] GET /admin/blog/blog/ => generated 6686 bytes in 407 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 14/14] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 21:16:01 2018] GET /admin/jsi18n/ => generated 7682 bytes in 187 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 15/15] 218.16.63.77 () {44 vars in 941 bytes} [Tue Nov 20 21:16:10 2018] GET / => generated 21869 bytes in 253 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 16/16] 218.16.63.77 () {44 vars in 959 bytes} [Tue Nov 20 21:16:22 2018] GET /blog/4 => generated 19632 bytes in 391 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 17/17] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 21:16:30 2018] GET / => generated 21869 bytes in 195 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 18/18] 218.16.63.77 () {44 vars in 959 bytes} [Tue Nov 20 21:16:34 2018] GET /blog/2 => generated 58308 bytes in 2055 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 19/19] 218.16.63.77 () {44 vars in 1013 bytes} [Tue Nov 20 21:17:28 2018] GET /admin/blog/blog/2/change/ => generated 61486 bytes in 559 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 20/20] 218.16.63.77 () {42 vars in 881 bytes} [Tue Nov 20 21:17:29 2018] GET /admin/jsi18n/ => generated 7682 bytes in 187 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 21/21] 218.16.63.77 () {52 vars in 1279 bytes} [Tue Nov 20 21:20:30 2018] POST /admin/blog/blog/2/change/ => generated 0 bytes in 4007 msecs (HTTP/1.1 302) 8 headers in 632 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 22/22] 218.16.63.77 () {46 vars in 1380 bytes} [Tue Nov 20 21:20:34 2018] GET /admin/blog/blog/ => generated 6686 bytes in 585 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 23/23] 218.16.63.77 () {42 vars in 872 bytes} [Tue Nov 20 21:20:35 2018] GET /admin/jsi18n/ => generated 7682 bytes in 171 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 24/24] 218.16.63.77 () {44 vars in 975 bytes} [Tue Nov 20 21:20:43 2018] GET /admin/ => generated 8079 bytes in 477 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 25/25] 218.16.63.77 () {44 vars in 953 bytes} [Tue Nov 20 21:21:07 2018] GET / => generated 21869 bytes in 313 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 26/26] 218.16.63.77 () {44 vars in 1003 bytes} [Tue Nov 20 21:21:32 2018] GET /search/?q=%E5%8D%9A%E6%96%87 => generated 15356 bytes in 374 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 27/27] 218.16.63.77 () {44 vars in 1031 bytes} [Tue Nov 20 21:21:55 2018] GET /search/?q=%E5%8D%9A%E5%AE%A2 => generated 15368 bytes in 238 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 28/28] 218.16.63.77 () {46 vars in 1061 bytes} [Tue Nov 20 21:26:14 2018] GET /search/?q=%E5%8D%9A%E5%AE%A2 => generated 15368 bytes in 368 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 29/29] 218.16.63.77 () {42 vars in 910 bytes} [Tue Nov 20 21:26:20 2018] GET / => generated 21869 bytes in 362 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 2363|app: 0|req: 30/30] 218.16.63.77 () {44 vars in 963 bytes} [Tue Nov 20 21:26:56 2018] GET /archive/ => generated 17163 bytes in 343 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
