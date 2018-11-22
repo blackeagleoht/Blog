@@ -90,6 +90,20 @@ class TagView(View):
             'tag_nums': tag_nums,
         })
 
+class CategoryView(View):
+
+    def get(self,request):
+        all_category = Category.objects.all()
+        count_nums = Counts.objects.get(id=1)
+        blog_nums = count_nums.blog_nums
+        cate_nums = count_nums.category_nums
+        tag_nums = count_nums.tag_nums
+        return render(request, 'categorys.html', {
+            'all_category': all_category,
+            'blog_nums': blog_nums,
+            'cate_nums': cate_nums,
+            'tag_nums': tag_nums,
+        })
 
 class TagDetailView(View):
     """

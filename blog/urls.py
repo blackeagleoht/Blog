@@ -1,7 +1,7 @@
 from django.conf.urls import url,include
 from django.contrib import admin
 from django.views.static import serve
-from .views import IndexView,ArichiveView,TagView,TagDetailView
+from .views import IndexView,ArichiveView,TagView,TagDetailView,CategoryView
 from .views import BlogDetailView,AddCommentView,CategoryDetaiView,MySearchView 
 from .feeds import BlogRssFeed
 
@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^rss/$', BlogRssFeed(), name='rss'),
     url(r'^category/(?P<category_name>\w+)$', CategoryDetaiView.as_view(), name='category_name'),
     url(r'^search/', MySearchView(),  name='haystack_search'),
+    url(r'^categorys/$', CategoryView.as_view(), name='categorys'),
 ]
 
 

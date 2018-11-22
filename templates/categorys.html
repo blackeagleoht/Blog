@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+文章分类
+{% endblock %}
+
+{% block content %}
+<div class="content-wrap">
+    <div id="content" class="content">
+
+        <div id="posts" class="posts-expand">
+            <header class="post-header">
+                <h2 class="post-title" itemprop="name headline">文章分类</h2>
+            </header>
+
+            <div class="categorys">
+                <div class="category-title">
+                    目前共计 {{ cate_nums }} 个分类
+                </div>
+                <div class="category-categorys">
+
+                    {% for category in all_category %}
+                        <a href="{% url 'category_name' category.name %}"
+                        style="font-size: 20px; "><font color="blue">
+                            {{ category.name }}</font></a>&nbsp;&nbsp;&nbsp;（{{category.number}}篇）
+						<br>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
